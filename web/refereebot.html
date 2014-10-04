@@ -1,0 +1,27 @@
+<head>
+  <title>refereebot</title>
+</head>
+
+<body>
+    {{> scoreboard}}
+</body>
+
+<template name="scoreboard">
+  <div class="scoreboard">
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+    <br/>
+    <button class="reset">New Game</button>
+  </div>
+</template>
+
+
+<template name="player">
+  <div class="player">
+    <h1>{{name}}</h1>
+    <h2>{{score}}</h2>
+    <button class="inc">GOAAAAAAAAL!</button>
+  </div>
+</template>
+
